@@ -30,6 +30,10 @@ const FileUpload = () => {
       console.log(acceptedFiles);
 
       const file = acceptedFiles[0];
+      if(file.size > 500 * 1024){
+        alert("Upload a pdf smaller than 500kb!");
+        return;
+      }
       const formData = new FormData();
       formData.append("file", file);
       console.log(file);
@@ -44,7 +48,6 @@ const FileUpload = () => {
         console.log("hey");
         console.log(result);
         if (result.data.status == "ok") {
-          alert("Uploaded files successfully, refresh the page");
           router.push("/chatbot");
         }
       } catch (error) {
