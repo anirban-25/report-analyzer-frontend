@@ -11,18 +11,20 @@ export default async function Page() {
   return (
     <div className="m-4 h-[91vh] ">
       <Link href="/">
-        <div className="cursro-pointer flex justify-center md:mt-5 mt-10 text-white md:text-black ">
-          <div className="flex items-center space-x-2">
-            <button>
-              <img
-                src="https://cdn-icons-png.flaticon.com/128/3845/3845868.png"
-                alt="Logo"
-                className=" w-6 md:w-9 mx-2"
-              />
-            </button>
-          </div>
-          <div className="text-xl md:text-3xl font-extrabold">
-            REPORT ANALYZER
+        <div className=" cursor-pointer flex justify-center md:mt-5 mt-10 text-white md:text-black ">
+          <div className="bg-green-700 flex p-4 rounded-full shadow-lg hover:bg-green-800 transition">
+            <div className="flex items-center space-x-2 ">
+              <button>
+                <img
+                  src="https://cdn-icons-png.flaticon.com/128/3845/3845868.png"
+                  alt="Logo"
+                  className=" w-6 md:w-9 mx-2"
+                />
+              </button>
+            </div>
+            <div className="text-xl md:text-3xl font-extrabold text-white hover:text-gray-100">
+              REPORT ANALYZER
+            </div>
           </div>
         </div>
       </Link>
@@ -35,7 +37,7 @@ export default async function Page() {
         </div>
       </div>
       <div className="flex justify-center mt-10 ">
-          <FileUpload/>
+        <FileUpload />
       </div>
     </div>
   );
