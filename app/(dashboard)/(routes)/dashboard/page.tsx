@@ -9,7 +9,7 @@ export default async function Page() {
   if (!user) return <div>Not logged in</div>;
 
   return (
-    <div className="m-4 ">
+    <div className="m-4 h-[91vh] ">
       <Link href="/">
         <div className="cursro-pointer flex justify-center md:mt-5 mt-10 text-white md:text-black ">
           <div className="flex items-center space-x-2">
