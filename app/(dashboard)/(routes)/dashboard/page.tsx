@@ -10,9 +10,9 @@ export default async function Page() {
 
   return (
     <div className="m-4 h-[91vh] ">
-      <Link href="/">
-        <div className=" cursor-pointer flex justify-center md:mt-5 mt-10 text-white md:text-black ">
-          <div className="bg-green-700 flex p-4 rounded-full shadow-lg hover:bg-green-800 transition">
+      <div className="  flex justify-center md:mt-5 mt-10 ">
+        <Link href="/">
+          <div className="bg-green-700 cursor-pointer border-2 border-green-800 flex p-4 rounded-full shadow-lg hover:bg-green-800 transition">
             <div className="flex items-center space-x-2 ">
               <button>
                 <img
@@ -26,13 +26,13 @@ export default async function Page() {
               REPORT ANALYZER
             </div>
           </div>
-        </div>
-      </Link>
+        </Link>
+      </div>
       <div className="flex justify-between mx-2 md:mt-0 mt-5 md:mx-10 items-center">
-        <div className="text-base md:text-2xl font-bold text-gray-800">
+        <div className="text-base md:text-2xl font-bold text-gray-800 bg-white p-2 shadow-md border-2 border-gray-100 bg-opacity-55 rounded-full">
           Hello there {user?.firstName} 👋
         </div>
-        <div className="border-2 border-black rounded-full">
+        <div className="border-2 border-black rounded-full ">
           <UserButton afterSignOutUrl="/" />
         </div>
       </div>
