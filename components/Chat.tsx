@@ -1,10 +1,17 @@
 import React, { useState } from "react";
-import {PaperAirplaneIcon, ArrowRightIcon, PlayIcon} from '@heroicons/react/solid'
+import {
+  PaperAirplaneIcon,
+  ArrowRightIcon,
+  PlayIcon,
+  MenuAlt3Icon,
+  MenuAlt1Icon,
+} from "@heroicons/react/solid";
+import Link from "next/link";
 interface Message {
   text: string;
   type: "user" | "bot";
 }
-
+import { MenuAlt4Icon } from "@heroicons/react/solid";
 const Chat: React.FC = () => {
   const [messages, setMessages] = useState<Message[]>([]);
   const [inputText, setInputText] = useState<string>("");
@@ -38,10 +45,14 @@ const Chat: React.FC = () => {
 
   return (
     <div>
-      <div className="flex flex-col h-[50vh] md:h-screen justify-between bg-black bg-opacity-80 md:border-black md:border-l-8">
-        <p className="flex justify-center p-2 font-bold text-base md:text-2xl text-green-50">
+      <div className="flex flex-col md:h-screen h-[90vh] justify-between bg-black bg-opacity-80 md:border-black md:border-l-8">
+        <p className=" justify-center p-2 font-bold hidden md:flex md:text-2xl text-green-50">
           START CONVERSATION WITH OUR CHATBOT
         </p>
+
+        <div className="md:hidden flex justify-center font-semibold text-base text-gray-200">
+          START CONVERSATION WITH OUR CHATBOT
+        </div>
         <div className="overflow-y-auto p-4 h-5/6">
           {messages.map((message, index) => (
             <div
@@ -68,10 +79,12 @@ const Chat: React.FC = () => {
             value={inputText}
             onChange={handleInputChange}
             placeholder="Type your message..."
-            className=" mr-2  rounded shadow-sm bg-transparent text-white  flex-1 outline-none" 
+            className=" mr-2  rounded shadow-sm bg-transparent text-white  flex-1 outline-none"
           />
-          <PaperAirplaneIcon className="w-10 h-8 rotate-90 cursor-pointer text-green-200" onClick={handleSendMessage}/>
-          
+          <PaperAirplaneIcon
+            className="w-10 h-8 rotate-90 cursor-pointer text-green-200"
+            onClick={handleSendMessage}
+          />
         </div>
       </div>
     </div>
