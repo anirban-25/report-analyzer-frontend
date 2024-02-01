@@ -36,7 +36,7 @@ export default async function Page() {
           <UserButton afterSignOutUrl="/" />
         </div>
       </div>
-      <div className="flex justify-center mt-10 ">
+      <div className="flex justify-center mt-12 md:mt-20 ">
         <FileUpload />
       </div>
     </div>
