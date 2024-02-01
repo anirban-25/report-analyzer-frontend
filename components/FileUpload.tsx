@@ -65,10 +65,10 @@ const FileUpload = () => {
   return (
     <div className="md:w-[70%] w-[100%]">
       <div
-        className="bg-white bg-opacity-35 rounded-xl px-10 pb-10 pt-5"
+        className="bg-white bg-opacity-35 rounded-xl md:px-10 pb-5 md:pb-10 pt-2 md:pt-5"
         id="innerContent"
       >
-        <div className="flex justify-center font-semibold text-base md:text-xl pb-5">
+        <div className="flex justify-center font-semibold text-base md:text-xl pb-2 md:pb-5">
           Upload your pdf here
         </div>
         <div className="p-2 bg-white rounded-xl mx-6 ">
@@ -91,22 +91,27 @@ const FileUpload = () => {
       {!allImage? (
         ""
       ) : (
-        <div className="mt-10 w-[100%] ">
-          <div className="flex text-2xl font-bold text-green-800 drop-shadow-lg justify-center">
+        <div className="mt-10 md:mt-20 w-[100%] ">
+          <div className="flex text-2xl md:text-3xl font-bold drop-shadow-lg justify-center text-white">
             Your uploaded Pdf
           </div>
           <div className="flex justify-center p-5 gap-x-5">
             <button
-              className="bg-green-500 p-2 text-white rounded-md shadow-lg shadow-green-900"
+              className="bg-green-500 p-2 text-white md:text-lg rounded-md shadow-lg shadow-green-900"
               onClick={() => showPdf(allImage["pdf"])}
             >
               Show Pdf
             </button>
             <button
-              className="bg-green-500 p-2 text-white rounded-md shadow-lg shadow-green-900"
+              className="bg-green-500 p-2 text-white md:text-lg rounded-md shadow-lg shadow-green-900"
               onClick={() => deleteMe()}
             >
               Delete Pdf
+            </button>
+          </div>
+          <div className="absolute bottom-10 right-10">
+            <button onClick={()=>{router.push("/chatbot")}} className="md:h-32 h-20 md:w-32 w-20 animate-bounce ">
+              <img src="bot.png" alt=""  />
             </button>
           </div>
         </div>
