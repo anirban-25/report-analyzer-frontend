@@ -1,10 +1,6 @@
 import React, { useState } from "react";
 import {
-  PaperAirplaneIcon,
-  ArrowRightIcon,
-  PlayIcon,
-  MenuAlt3Icon,
-  MenuAlt1Icon,
+  PaperAirplaneIcon
 } from "@heroicons/react/solid";
 import Link from "next/link";
 interface Message {
