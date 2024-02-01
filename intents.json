@@ -1,0 +1,64 @@
+{
+    "intents": [
+      {
+        "tag": "greeting",
+        "patterns": [
+          "Hi",
+          "Hey",
+          "I need help",
+          "Is anyone there?",
+          "Hello",
+        ],
+        "responses": [
+          "Hi, I am a medical report analyzer",
+          "Hello! I am here to assist you with your medical reports",
+          "How can I help you today?",
+          "Hey there! I am a medical Chat Bot."
+        ]
+      },
+      {
+        "tag": "goodbye",
+        "patterns": ["Bye", "See you later", "Goodbye"],
+        "responses": [
+          "Goodbye, take care of yourself. ",
+          "Let me know if you any have further queries",
+          "Okay, then! Is there anything else I can help you with?"
+        ]
+      },
+      {
+        "tag": "thanks",
+        "patterns": ["Thanks", "Thank you", "That's helpful", "Thank's a lot!"],
+        "responses": ["Happy to help!", "Any time!", "My pleasure"]
+      },
+      {
+        "tag": "appointment",
+        "patterns": ["schedule appointment", "see a doctor", "consultation"],
+        "responses": ["If you need to schedule an appointment, please contact your healthcare provider directly."]
+      },
+      {
+        "tag": "medical_condition",
+        "patterns": ["diagnose", "medical condition", "health issue"],
+        "responses": ["I can help analyze your medical report. Please provide details about your specific concerns."]
+      },
+      {
+        "tag": "medication",
+        "patterns": ["medication", "prescription", "drugs"],
+        "responses": ["I'm not a doctor, but I can provide general information. Please consult a healthcare professional for specific medication advice."]
+      },
+      {
+        "tag": "insurance_coverage",
+        "patterns": ["insurance coverage", "policy", "coverage details"],
+        "responses": ["I can't provide specific insurance details. It's recommended to contact your insurance provider for coverage-related questions."]
+      },
+      {
+        "tag": "emergency",
+        "patterns": ["emergency", "urgent", "call 911"],
+        "responses": ["If you are experiencing a medical emergency, please call emergency services immediately."]
+      },
+      {
+        "tag": "mental_health",
+        "patterns": ["mental health support", "stress management", "emotional well-being"],
+        "responses": ["Mental health is important. Consider reaching out to a mental health professional for support if needed."]
+      }
+    ]
+  }
